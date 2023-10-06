@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost&family=Mulish:wght@400;500;600;700&family=Nunito+Sans:wght@300;400&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="Aquí va nuestra propuesta de valor">
+    <title>Indusmart</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="/galery/icons/logo.png" alt="InduSmart logo" class="logo-nav">
+            <div class="menu">
+                <a href="#Nosotros" class="pNav" onclick="toggleMenu()">Nosotros</a>
+                <a href="#Servicios" class="pNav" onclick="toggleMenu()">Servicios</a>
+                <a href="#Proyectos" class="pNav" onclick="toggleMenu()">Proyectos</a>
+                <a href="#Contacto">
+                    <button class="button-nav" onclick="toggleMenu()">
+                        <p>CONTÁCTANOS</p>
+                    </button>
+                </a>
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                <img src="/galery/icons/burger.svg" alt="InduSmart logo" class="burger-icon">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="Nosotros" class="swiper-container swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="SlideHero">
+                        <div class="LeftHeroSwiper">
+                            <h1>COMMISSIONING</h1>
+                            <p>
+                                Nuestro personal ejecuta las tareas de mayor complejidad en las áreas PRECOM/COMM,
+                                permitiendo a nuestro cliente cumplir con los estándares de la industria y las mejores
+                                prácticas constructivas exigibles de la industria.
+                            </p>
+                            <a href="#Proyectos">
+                                <button>
+                                    <p>Ver proyectos</p>
+                                </button>
+                            </a>
+                        </div>
+                        <img src="galery/home/hero/slide1.jpg" id="hero1-image" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="SlideHero">
+                        <div class="LeftHeroSwiper">
+                            <h1 class="h1Slide2">Ingeniería de Detalle</h1>
+                            <p>
+                                Elaboración de la documentación entregable para: construcir una obra, fabricar
+                                una máquina, definir alcances de trabajo, etc. a partir de la solicitud del cliente.
+                            </p>
+                            <a href="#Proyectos">
+                                <button>
+                                    <p>Ver proyectos</p>
+                                </button>
+                            </a>
+                        </div>
+                        <img src="galery/home/hero/slide2.jpg" id="hero2-image" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="SlideHero">
+                        <div class="LeftHeroSwiper">
+                            <h1>El trabajo: Hecho!</h1>
+                            <p>
+                                Los servicios prestados al cliente se enfocan en resolver las necesidades con un nivel
+                                de servicio conocido.
+                                Más que brindar asesoría técnica, nuestros especialistas “ejecutan” las tareas en nombre
+                                de nuestros clientes,
+                                a fin de garantizar los mejores resultados en las etapas finales de la obra.
+                            </p>
+                            <a href="#Proyectos">
+                                <button>
+                                    <p>Ver proyectos</p>
+                                </button>
+                            </a>
+                        </div>
+                        <img src="galery/home/hero/slide3.jpg" id="hero3-image" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        <script> /*RESPONSIVE - IMÁGENES DEL SLIDE */
+            window.addEventListener('resize', function () {
+                var screenWidth = window.innerWidth;
+                var hero1Image = document.getElementById('hero1-image');/*ID de la imágen*/
+                var hero2Image = document.getElementById('hero2-image');/*ID de la imágen*/
+                var hero3Image = document.getElementById('hero3-image');/*ID de la imágen*/
+
+                if (screenWidth <= 1224) {
+                    /**Para mobile - src de las imágenes*/
+                    hero1Image.src = 'galery/home/hero/slide1-small.jpg';
+                    hero2Image.src = 'galery/home/hero/slide2-small.jpg';
+                    hero3Image.src = 'galery/home/hero/slide3-small.jpg';
+                } else {
+                    /**Para desktop - src de las imágenes*/
+                    hero1Image.src = 'galery/home/hero/slide1.jpg';
+                    hero2Image.src = 'galery/home/hero/slide2.jpg';
+                    hero3Image.src = 'galery/home/hero/slide3.jpg';
+                }
+            });
+        </script>
+        <section id="Servicios" class="Servicios">
+            <h2>Servicios</h2>
+            <div class="container-card-servicios">
+                <div class="card-servicios">
+                    <img src="galery/home/ingenieria-card.jpg">
+                    <h3>Ingeniería de detalle</h3>
+                    <p>Elaboración de documentos técnicos tales como memorias descriptivas, cálculos, planos, modelos
+                        3D, diagramas, pliegos, informes, listas, procedimientos, registros, etc.</p>
+                </div>
+                <div class="card-servicios">
+                    <img src="galery/home/outsourcing-card.jpg">
+                    <h3>Outsourcing</h3>
+                    <p>Se provee al cliente con personal altamente especializado para liderar tareas de mayor
+                        complejidad con perfiles multidisciplinarios. Con este servicio el cliente no requiere aumentar
+                        la plantilla oficial del cliente o bien le permite cubrir una posición temporalmente, hasta
+                        disponer de un reemplazo capacitado.</p>
+                </div>
+            </div>
+        </section>
+        <section id="Testimonios" class="Testimonios">
+            <div class="Testimonios-container">
+                <h5>TESTIMONIOS</h5>
+                <h2>Reconocen nuestro trabajo</h2>
+                <div class="swiper paddingT">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="cardTestimonios">
+                                <img src="galery/home/person1.png" />
+                                <p class="text">
+                                    Reseña o testimonio de cliente. Solicitar acorde encuesta de
+                                    satisfacción del cliente.
+                                </p>
+                                <div>
+                                    <p class="name">Nombre Cliente</p>
+                                    <p class="cargo">Puesto | Empresa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cardTestimonios">
+                                <img src="galery/home/person2.png" />
+                                <p class="text">
+                                    Reseña o testimonio de cliente. Solicitar acorde encuesta de
+                                    satisfacción del cliente.
+                                </p>
+                                <div>
+                                    <p class="name">Nombre Cliente</p>
+                                    <p class="cargo">Puesto | Empresa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cardTestimonios">
+                                <img src="galery/home/person1.png" />
+                                <p class="text">
+                                    Reseña o testimonio de cliente. Solicitar acorde encuesta de
+                                    satisfacción del cliente.
+                                </p>
+                                <div>
+                                    <p class="name">Nombre Cliente</p>
+                                    <p class="cargo">Puesto | Empresa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cardTestimonios">
+                                <img src="galery/home/person2.png" />
+                                <p class="text">
+                                    Reseña o testimonio de cliente. Solicitar acorde encuesta de
+                                    satisfacción del cliente.
+                                </p>
+                                <div>
+                                    <p class="name">Nombre Cliente</p>
+                                    <p class="cargo">Puesto | Empresa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="galery/icons/arrow.svg" class="svgArrow swiper-button-prev" />
+                    <img src="galery/icons/arrow.svg" class="svgArrow swiper-button-next" />
+                </div>
+            </div>
+        </section>
+        <section id="Proyectos" class="Portafolio">
+            <h2>Participación en proyectos</h2>
+            <div class="container-card-portafolio">
+                <div class="card-portafolio">
+                    <img src="galery/home/proy1.png">
+                    <h4>Fabricación de Tablero General de Baja Tensión</h4>
+                    <p class="lugar">Base Centenario, Patagonia Field Services</p>
+                    <p>Fabricación de tablero eléctrico acorde a especificaciones industriales en contexto de
+                        imprevisto. Este proyecto permitió a nuestro cliente mantener su compromiso de entrega tras
+                        haber recibido una provisión no conforme.</p>
+                </div>
+                <div class="card-portafolio">
+                    <img src="galery/home/proy2.png">
+                    <h4>Servicio de PRECOM/COMM en obra de Pozo Sumidero</h4>
+                    <p class="lugar">Yacimiento La Calera, Pluspetrol</p>
+                    <p>Para una obra ejecutada por Patagonia Field Services, el equipo de Indusmart colabora en la
+                        gestión del precomisionado y el comisionado de los instrumentos, sistemas de cañerías, tableros
+                        y equipos que conforman la obra. Esta prestación permitió al cliente la detección oportuna de
+                        errores de diseño, colaboró con las gestiones de compra y aseguró una construcción acorde a los
+                        requisitos contractuales de la obra.</p>
+                </div>
+                <div class="card-portafolio">
+                    <img src="galery/home/proy3.png">
+                    <h4>Revamping de bombeadores químicos</h4>
+                    <p class="lugar">Parque Industrial Neuquén, Rimaoil Services</p>
+                    <p>Desarrollo de ingeniería para remodelación de circuitos hidráulicos en equipos bombeadores de
+                        químicos de la empresa ChampionX. Este proyecto permitió a nuestro cliente la implantación de un
+                        modelo genérico para el revamping de una flota de camiones que ejecutan servicios de pozo. El
+                        prototipo inicial superó su producción en más de 3 veces, respecto al estado anterior del
+                        equipo, aumentando el número de servicios diarios realizados por el cliente final.</p>
+                </div>
+            </div>
+            <button>
+                <p>Ver más proyectos →</p>
+            </button>
+        </section>
+        <section class="Consultas">
+            <div class="SectionConsultas">
+                <img src="/galery/home/bg-preguntas.jpg" />
+                <div>
+                    <h5>... ALGUNOS CONCEPTOS ...</h5>
+                    <h2>Preguntas frecuentes</h2>
+                    <div class="preguntas-container">
+                        <div class="card-preguntas">
+                            <img src="galery/icons/llamar-icon.png">
+                            <div class="text-preguntas">
+                                <h6> ¿Qué es el Precomisionado? </h6>
+                                <p> Es el conjunto de verificaciones y pruebas realizadas a una instalación, sistema,
+                                    subsistema, equipo o componente realizadas sin energía o bien utilizando energías
+                                    controladas, en condiciones de laboratorio.</p>
+                            </div>
+                        </div>
+                        <div class="card-preguntas">
+                            <img src="galery/icons/llamar-icon.png">
+                            <div class="text-preguntas">
+                                <h6> ¿Qué es el Comisionado? </h6>
+                                <p> Es el conjunto de verificaciones y pruebas realizadas a una instalación, sistema,
+                                    subsistema, equipo o componente utilizando las energías del proceso.</p>
+                            </div>
+                        </div>
+                        <div class="card-preguntas">
+                            <img src="galery/icons/llamar-icon.png">
+                            <div class="text-preguntas">
+                                <h6> ¿Para qué se realizan divisiones en sistemas y subsistemas? </h6>
+                                <p> Para establecer límites lógicos que permitan analizar la obra, constructivamente,
+                                    como varias secciones funcionales independientes. Sobre estas divisiones se
+                                    establecen los alcances de las pruebas, permitiendo al propietario de la planta
+                                    realizar aislamientos, reparaciones o construcciones parciales que luego pasarán a
+                                    integrarse con el resto de la instalación.</p>
+                            </div>
+                        </div>
+                        <div class="card-preguntas">
+                            <img src="galery/icons/llamar-icon.png">
+                            <div class="text-preguntas">
+                                <h6> ¿Qué aporta la gestión de PRECOM/COMM al desarrollo de la obra? </h6>
+                                <p> La gestión de PRECOM/COMM brinda ahorros en tiempo y dinero, Reduce el impacto de
+                                    problemas imprevistos, Facilita el cumplimiento de los plazos de entrega, Brinda un
+                                    registro documentado de la calidad del proceso constructivo, Garantiza una Puesta en
+                                    Marcha exitosa de la instalación, entre otras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Contacto" class="Contacto">
+            <div class="contacto-container">
+                <h1>CONTÁCTANOS</h1>
+                <p>¡Envíanos tus datos y nos comunicaremos contigo!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="/galery/icons/logo.png" alt="InduSmart logo" class="logo-footer">
+        <p>
+            administracion@indusmart.com.ar
+        </p>
+        <div class="redes-sociales">
+            <a href="http://www.indusmart.com.ar/" target="_blank"><img src="/galery/icons/facebook.png" /></a>
+            <a href="http://www.indusmart.com.ar/" target="_blank"><img src="/galery/icons/instagram.png" /></a>
+            <a href="http://www.indusmart.com.ar/" target="_blank"><img src="/galery/icons/linkedin.png" /></a>
+        </div>
+        <p class="credits">
+            Todos los derechos reservados © INDUSMART 2023 | Design by
+            <span>
+                <a href="https://ciclos.studio/" target="_blank">CICLOS STUDIO</a>
+            </span>
+        </p>
+    </footer>
+    <a href="https://api.whatsapp.com/send?phone=+5492991234567&text=Hola,%20quisiera%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20INDUSMART%20%F0%9F%92%A1"
+        target="_blank" class="wsp-button">
+        <img src="galery/icons/wsp.svg" alt="wsp-logo" />
+    </a>
+    <script src="js/header.js"></script>
+    <script src="js/swiperHero.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/swiperTestimonios.js"></script>
+</body>
+
+</html>
